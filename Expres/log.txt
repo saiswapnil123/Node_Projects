@@ -1,0 +1,10 @@
+app.use('/',function(req,res,next){
+    const time = date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
+    var data = req.url +"  "+req.method+"  "+time+"\n"; 
+    fs.writeFileSync("./Express/log.txt",data,{flag:'a'});
+    next();
+});/get  GET  16:27:3
+/  GET  16:27:47
+/  GET  16:29:56
+/  GET  16:29:56
+/  GET  16:31:17
